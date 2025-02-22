@@ -1,0 +1,34 @@
+.recipe-details-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .recipe-section {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  ul, ol {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  ul li, ol li {
+    background: #fff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
