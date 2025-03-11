@@ -1,9 +1,9 @@
 import express from "express";
-import authMiddleware from "../middleware/authMiddleware.js"; // Import middleware
+import authMiddleware from "../middleware/authMiddleware.js"; 
 
 const router = express.Router();
 
-// Protected route: Add a new recipe
+
 router.post("/", authMiddleware, (req, res) => {
     const { title, ingredients } = req.body;
 
@@ -13,7 +13,7 @@ router.post("/", authMiddleware, (req, res) => {
 
     res.json({
         message: "Recipe added successfully!",
-        user: req.user, // User data from the token
+        user: req.user, 
     });
 });
 
