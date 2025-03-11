@@ -3,26 +3,26 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
-import recipeRoutes from "./routes/recipeRoutes.js"; // Import recipe routes
+import recipeRoutes from "./routes/recipeRoutes.js"; 
 
-dotenv.config(); // Load .env variables
+dotenv.config();
 
 const app = express();
 
-// Middleware
+
 app.use(cors());
-app.use(express.json()); // Parse JSON request bodies
+app.use(express.json()); 
 
-// Routes
+
 app.use("/api/auth", authRoutes);
-app.use("/api/recipes", recipeRoutes); // Register the recipe routes
+app.use("/api/recipes", recipeRoutes); 
 
-// Default Route
+
 app.get("/", (req, res) => {
     res.send("Welcome to Recipe Sharing API!");
 });
 
-// Connect to MongoDB
+
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI, {
@@ -37,7 +37,7 @@ const connectDB = async () => {
         });
     } catch (error) {
         console.error("❌ MongoDB Connection Error:", error);
-        process.exit(1); // Stop the server if DB connection fails
+        process.exit(1); 
     }
 };
 
